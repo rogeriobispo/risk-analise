@@ -7,5 +7,5 @@ gem 'sinatra-contrib'
 group :test do
   gem 'rack-test'
   gem 'rspec'
-  gem 'rubocop', require: false
+  gem 'rubocop'; require: false
 end

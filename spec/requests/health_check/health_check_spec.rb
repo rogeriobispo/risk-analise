@@ -1,6 +1,6 @@
 require_relative '../../spec_helper'
 
-RSpec.describe 'health_check API'; type: :request do
+RSpec.describe 'health_check API', type: :request do
   let(:response) { get '/' }
   let(:expected_response) { { 'message' => 'I am alive' } }
 

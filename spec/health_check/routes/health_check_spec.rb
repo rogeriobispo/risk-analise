@@ -1,4 +1,4 @@
-require_relative '../../../spec_helper'
+require_relative '../../spec_helper'
 
 RSpec.describe 'health_check API', type: :request do
   let(:response) { get '/' }

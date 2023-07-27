@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :transaction do
-    transaction_id { 123_456 }   
+    transaction_id { 123_456 }
     merchant_id { 654_123 }
     user_id { 123 }
     card_number { '423069******2627' }

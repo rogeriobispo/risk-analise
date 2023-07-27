@@ -1,9 +1,9 @@
-class MaxTransactionInARow 
+class MaxTransactionInARow
   def self.execute(card_number, user_id)
-    max_transaction = ENV['MAX_TRANSACTION_IN_A_ROW']
+    max_transaction = ENV.fetch('MAX_TRANSACTION_IN_A_ROW', nil)
     frame = ENV['MAX_TRANSACTION_IN_A_ROW_FRAME'].to_i
 
-    transaction = Transaction.where(user_id: user_id, transaction_date: Time.now - frame.hours... Time.now)
+    transaction = Transaction.where(user_id: user_id, transaction_date: Time.now - frame.hours...Time.now)
 
     return false if transaction.count > max_transaction.to_i
 

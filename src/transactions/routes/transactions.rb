@@ -1,12 +1,12 @@
-permited_params = [
-  :transaction_id, 
-  :merchant_id,
-  :user_id,
-  :card_number,
-  :transaction_date,
-  :transaction_amount,
-  :device_id,
-  :has_cbk 
+permited_params = %i[
+  transaction_id
+  merchant_id
+  user_id
+  card_number
+  transaction_date
+  transaction_amount
+  device_id
+  has_cbk
 ]
 
 post '/transactions', allows: permited_params do
@@ -20,4 +20,3 @@ post '/transactions', allows: permited_params do
     json errors: transaction.errors.messages
   end
 end
-

@@ -1,5 +1,5 @@
 class Transaction < ActiveRecord::Base
-  validates :transaction_id, 
+  validates :transaction_id,
             :merchant_id,
             :user_id,
             :card_number,

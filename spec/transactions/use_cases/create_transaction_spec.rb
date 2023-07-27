@@ -2,7 +2,7 @@ require_relative '../../spec_helper'
 
 RSpec.describe CreateTransaction do
   subject(:transaction) { described_class.execute(payload) }
-  
+
   context 'return a valid transaction' do
     let(:payload) { attributes_for(:transaction) }
     it { expect(transaction).to be_valid }

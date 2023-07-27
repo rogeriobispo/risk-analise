@@ -1,6 +1,6 @@
 require 'sinatra'
 require 'sinatra/json'
-require "sinatra/activerecord"
+require 'sinatra/activerecord'
 require 'sinatra/reloader' if development?
 require 'redis'
 require 'sinatra/strong-params'
@@ -23,4 +23,3 @@ require_relative 'transactions/use_cases/start_validations'
 before do
   content_type :json
 end
-

@@ -4,9 +4,8 @@ require 'shoulda-matchers'
 require 'database_cleaner/active_record'
 require 'support/factory_bot'
 
-require_relative './factories/transaction'
+require_relative 'factories/transaction'
 require_relative '../src/app'
-
 
 def app
   Sinatra::Application
@@ -45,5 +44,4 @@ Shoulda::Matchers.configure do |config|
   end
 end
 
-old_logger = ActiveRecord::Base.logger
 ActiveRecord::Base.logger = nil

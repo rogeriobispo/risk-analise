@@ -1,5 +1,5 @@
 class EndValidations
-  def self.execute()
+  def self.execute
     true
   end
 end

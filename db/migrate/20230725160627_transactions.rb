@@ -3,8 +3,8 @@ class Transactions < ActiveRecord::Migration[7.0]
     create_table :transactions do |t|
       t.integer :transaction_id, null: false
       t.integer :merchant_id, null: false
-      t.integer :user_id, null: false
-      t.string :card_number, null: false
+      t.integer :user_id, null: false, index: true
+      t.string :card_number, null: false, index: true
       t.timestamp :transaction_date, null: false
       t.float :transaction_amount, null: false
       t.integer :device_id, required: false

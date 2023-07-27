@@ -15,6 +15,11 @@ require_relative 'health_check/routes/health'
 require_relative 'transactions/routes/transactions'
 require_relative 'transactions/model/transaction'
 require_relative 'transactions/use_cases/create_transaction'
+require_relative 'transactions/use_cases/end_validations'
+require_relative 'transactions/use_cases/user_has_charge_back'
+require_relative 'transactions/use_cases/transaction_frame_permited'
+require_relative 'transactions/use_cases/max_transaction_in_a_row'
+require_relative 'transactions/use_cases/start_validations'
 
 before do
   content_type :json

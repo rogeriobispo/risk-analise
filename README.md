@@ -97,8 +97,15 @@ graph LR;
 
 ```
 
-3. the main acquirer of brasil - rede - getnet - cielo - Stone
-   3.1 the main sub-aquirer of brazil - PagSeguro - SumUp - Mercado Pago
+3. the main acquirer of brasil
+	- rede
+	- getnet
+     	- cielo
+        - Stone
+   3.1 the main sub-aquirer of brazil
+	- PagSeguro
+	- SumUp
+  	- Mercado Pago
 
 ##### 2. Explain the difference between acquirer, sub-acquirer and payment gateway and how the flow explained in question 1 changes for these players.
 

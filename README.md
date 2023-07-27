@@ -45,8 +45,8 @@ the answer is on the bottom here
 ```
  post /transactions
 ```
-
-```body
+- body
+```json
 {
   "transaction_id" : 2342357,
   "merchant_id" : 29744,
@@ -57,8 +57,8 @@ the answer is on the bottom here
   "device_id" : 285475
 }
 ```
-
-```Response
+- Response
+```json
 {
   "transaction_id" : 2342357,
   "recommendation" : "approve"

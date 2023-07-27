@@ -10,7 +10,6 @@ require 'pry-remote' if development?
 
 require_relative '../config/dotenv'
 require_relative '../config/database'
-require_relative 'shared/providers/cache/redis_provider'
 require_relative 'health_check/routes/health'
 require_relative 'transactions/routes/transactions'
 require_relative 'transactions/model/transaction'

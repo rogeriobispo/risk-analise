@@ -7,6 +7,7 @@ require 'support/factory_bot'
 require_relative './factories/transaction'
 require_relative '../src/app'
 
+
 def app
   Sinatra::Application
 end
@@ -43,3 +44,6 @@ Shoulda::Matchers.configure do |config|
     with.library :active_model
   end
 end
+
+old_logger = ActiveRecord::Base.logger
+ActiveRecord::Base.logger = nil

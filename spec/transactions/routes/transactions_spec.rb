@@ -9,7 +9,7 @@ RSpec.describe 'Transactions end point', type: :request do
   let(:expected_response) do 
     { 
       'transaction_id' => payload[:transaction_id],
-      'recommendation' => 'approve'
+      'recommendation' => 'APPROVE'
     } 
   end
 
@@ -25,6 +25,22 @@ RSpec.describe 'Transactions end point', type: :request do
     it 'expect to return the proper payload' do
       expect(JSON.parse(response.body)['errors']['card_number']).to eq(["can't be blank"])
       expect(response.status).to eq(422)
+    end
+  end
+
+  context 'when denied' do  
+    let!(:transaction) { create(:transaction, has_cbk: true) }
+
+    let(:expected_response) do 
+      { 
+        'transaction_id' => payload[:transaction_id],
+        'recommendation' => 'DENY' 
+      } 
+    end
+
+    it 'expect to return the proper payload' do
+      expect(JSON.parse(response.body)).to eq(expected_response)
+      expect(response.status).to eq(200)
     end
   end
 end

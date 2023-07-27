@@ -10,6 +10,8 @@ gem 'activerecord'
 gem 'sinatra-activerecord'
 gem 'sinatra-strong-params'
 gem 'rake'
+gem 'puma'
+
 
 group :test do
   gem 'rack-test'

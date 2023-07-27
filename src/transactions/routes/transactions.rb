@@ -14,7 +14,7 @@ post '/transactions', allows: permited_params do
 
   if transaction.save
     status 200
-    json transaction_id: transaction.transaction_id, recommendation: 'approve'
+    json transaction_id: transaction.transaction_id, recommendation: StartValidations.execute(transaction)
   else
     status 422
     json errors: transaction.errors.messages

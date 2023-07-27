@@ -6,7 +6,7 @@ the main reason of this application is to validate a transaction.
 
 and respond if it is kinda a possible chargeback.
 
-  
+the answer is on the bottom here
 
 # dependencies
 

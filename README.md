@@ -7,6 +7,8 @@
 
 ## prepare database 
   * change .env with database host config
+  * create database with docker compose 
+    - docker compose up -d postgres
 
   - Development
     rake db:drop db:create db:migrate
